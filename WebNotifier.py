@@ -7,7 +7,7 @@ from pathlib import Path
 from time import sleep
 
 import Email.email as email
-import Lib.keyring as password
+import Lib.password as password
 import WebParser.website as website
 
 
@@ -26,22 +26,22 @@ def checkEnvironment():
 
 def readConfigs():
     config = configparser.ConfigParser()
-    configPath = (Path(__file__) / ".." / ".." / "user_config.ini").resolve()
-    config.read(configPath)
+    iniFile = str(Path(__file__) / ".." / "config.ini")
+    config.read(iniFile)
     return config
 
 if __name__ == "__main__":
     checkEnvironment()
     config = readConfigs()
     emailAddress = config["GENERAL"]["EMAIL_ADDRESS"]
-    emailPasswort = password.getPasswort(emailAddress)
+    emailPasswort = password.getEmailPassword(emailAddress)
     email = email.email(emailAddress, emailPasswort)
     url = config["GENERAL"]["TRACKED_WEBSITE"]
     webDriver = config["GENERAL"]["WEBDRIVER"]
     browser = config["GENERAL"]["BROWSER"]
-    website = website(url, webDriver, browser)
+    website = website.website(url, webDriver, browser)
     while True:
         website.update()
         if website.isChanged:
-            email.sendEmail(website.url, "Logitech keyboard is available")
-        sleep(120)
+            email.sendEmail(website.URL, "Logitech keyboard is available")
+        sleep(9000)

@@ -2,7 +2,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 try:
-    import smtplib 
+    import smtplib
 except:
     logger.error("could not import smtplib")
     pass
@@ -11,18 +11,17 @@ class email():
     def __init__(self, email, password):
         self.email = email
         self.password = password
-        self.port = None
-        self.server = None
+        self.port = 587
+        self.setupEmailServer()
 
-    def setupEmailServer(self, port):
+    def setupEmailServer(self):
         """
         Setup email server.
         """
-        self.port = port
-        self.server = smtplib.SMTP("smtp.gmail.com", port) 
-        self.server.starttls() 
-        self.server.login(self.email, self.password) 
-        return 
+        self.server = smtplib.SMTP("smtp.gmail.com", self.port)
+        self.server.starttls()
+        self.server.login(self.email, self.password)
+        return
 
     def sendEmail(self, message, subject):
         """
