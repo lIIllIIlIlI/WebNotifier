@@ -1,5 +1,6 @@
 # imports ---------------------
 import logging
+import re
 from time import sleep
 from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options
@@ -36,16 +37,24 @@ class website():
         driver.find_element_by_xpath('//*[@id="onetrust-accept-btn-handler"]').click()
         languageSelection = driver.find_element_by_class_name("js-product-model-selector")
         sleep(4)
-        driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[2]/button').click()
-        sleep(4)
         dropdownMenu = Select(languageSelection)
         dropdownMenu.select_by_value("deutsch(qwertz)")
         clickSelection = driver.find_elements_by_class_name("js-product-model-selector")
         actualClickSelection = clickSelection[1]
         dropdownMenu = Select(actualClickSelection)
         dropdownMenu.select_by_value("clicky")
-        colors = driver.find_elements_by_class_name("color-swatch js-color-swatch disabled")
+        sleep(5)
+        picture = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[17]/div[1]/div/ul/div/div/li[1]/div')
+        colorsWhite = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[2]/button').is_enabled()
+        # colorsWhite = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[2]/button').click()
+        colorBlack = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[1]/button').is_enabled()
+        # colors = driver.find_elements_by_class_name("color-swatch js-color-swatch disabled").isEnabled()
+        sleep(4)
+        outerHtml = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[12]/div[1]/div/ul/div/div/li[1]/div/img').get_attribute('outerHTML')
+        if re.search(r'tkl-carbon-gallery' ,outerHtml):
+            print("its not available")
         print("hello")
+
 
         # <button class="color-swatch js-color-swatch disabled" data-color-id="white" data-hexes="" data-bg-img="https://resource.logitechg.com/w_677,ar_1:1,c_limit,b_rgb:2f3132,q_auto:best,f_auto,dpr_auto/content/dam/gaming/en/products/swatch/white.jpg?v=1" aria-label="Weiß">
 		# 		<span class="swatch js-swatch" style="background-image: url(&quot;https://resource.logitechg.com/w_677,ar_1:1,c_limit,b_rgb:2f3132,q_auto:best,f_auto,dpr_auto/content/dam/gaming/en/products/swatch/white.jpg?v=1&quot;);">
