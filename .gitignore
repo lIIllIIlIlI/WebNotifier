@@ -1,0 +1,6 @@
+
+*.log
+*.pyc
+*.pyc
+WebParser/__pycache__/website.cpython-39.pyc
+*.pyc

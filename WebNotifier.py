@@ -44,4 +44,5 @@ if __name__ == "__main__":
         website.update()
         if website.isChanged:
             email.sendEmail(website.URL, "Logitech keyboard is available")
-        sleep(9000)
+            sleep(60*60*24)
+        sleep(120)
