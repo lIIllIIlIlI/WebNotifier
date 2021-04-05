@@ -8,7 +8,8 @@ from time import sleep
 
 import Email.email as email
 import Lib.password as password
-import WebParser.website as website
+import WebParser.logitech as logitechWebsite
+import WebParser.gpu as gpuWebsite
 
 
 # Globals ---------------------
@@ -36,13 +37,17 @@ if __name__ == "__main__":
     emailAddress = config["GENERAL"]["EMAIL_ADDRESS"]
     emailPasswort = password.getEmailPassword(emailAddress)
     email = email.email(emailAddress, emailPasswort)
-    url = config["GENERAL"]["TRACKED_WEBSITE"]
     webDriver = config["GENERAL"]["WEBDRIVER"]
     browser = config["GENERAL"]["BROWSER"]
-    website = website.website(url, webDriver, browser)
+    logitech = logitechWebsite.logitech(webDriver, browser)
+    gpu = gpuWebsite.gpu(webDriver, browser)
     while True:
-        website.update()
-        if website.isChanged:
-            email.sendEmail(website.URL, "Logitech keyboard is available")
+        logitech.update()
+        if logitech.isChanged:
+            email.sendEmail(logitech.URL, "Logitech keyboard is available")
             sleep(60*60*24)
+        gpu.update()
+        if gpu.changedWebsites:
+            for website in gpu.changedWebsites:
+                email.sendEmail(website, "Gpu ist available")
         sleep(120)
