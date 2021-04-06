@@ -50,4 +50,4 @@ if __name__ == "__main__":
         if gpu.changedWebsites:
             for website in gpu.changedWebsites:
                 email.sendEmail(website, "Gpu ist available")
-        sleep(120)
+        sleep(110)

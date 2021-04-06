@@ -1451,3 +1451,22 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1617666802596	Marionette	WARN	TLS certificate errors will be ignored for this session
 1617666803932	Marionette	INFO	Stopped listening on port 57378
 JavaScript error: , line 0: uncaught exception: undefined
+1617667021118	geckodriver	INFO	Listening on 127.0.0.1:57619
+1617667024120	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileXugiLG"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667025177	Marionette	INFO	Listening on port 57630
+1617667025633	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617667027724	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1617667042014	Marionette	INFO	Stopped listening on port 57630
+1617667042530	geckodriver	INFO	Listening on 127.0.0.1:57772
+1617667045531	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileZvy9bf"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667046459	Marionette	INFO	Listening on port 57781
+1617667046547	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 2059 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
