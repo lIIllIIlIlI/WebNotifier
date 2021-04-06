@@ -5,3 +5,4 @@
 WebParser/__pycache__/website.cpython-39.pyc
 *.pyc
 geckodriver.log
+__pycache__
