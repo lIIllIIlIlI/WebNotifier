@@ -48,7 +48,6 @@ class gpu(website):
           self.oldRxPostCount = rxPostCount
         else:
           logger.info("No new RX cards found")
-          self.newGpuPosts["Radeon"] = rxPosts[-1].text
         driverRX.quit()
 
         # check for new 3070 cards
