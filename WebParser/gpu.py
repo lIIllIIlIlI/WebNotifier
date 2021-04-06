@@ -19,17 +19,18 @@ logger = logging.getLogger(__name__)
 class gpu(website):
     def __init__(self, webDriver, browser):
         super().__init__(self, webDriver, browser)
-        self.changedWebsites = []
-        self.oldRxPageContent = ""
-        self.old3070PageContent = ""
-        self.old3080PageContent = ""
-        self.old3090PageContent = ""
+        self.newGpuPosts = {}
+        self.oldRxPostCount = ""
+        self.old3070PostCount = ""
+        self.old3080PostCount = ""
+        self.old3090PostCount = ""
 
     def update(self):
         """
         """
-        self.changedWebsites = []
+        self.newGpuPosts = {}
         xpath = '/html/body/div[2]/div[4]/div[1]/div[2]/div[2]/div/div[1]/div[4]/div'
+        className = 'bbWrapper'
         RX_WEBSITE = 'https://www.hardwareluxx.de/community/threads/rx-gpu-verf%C3%BCgbarkeitshinweise.1282621/page-1000'
         RTX3070_WEBSITE = 'https://www.hardwareluxx.de/community/threads/rtx-3070-gpu-verf%C3%BCgbarkeitshinweise.1284024/page-1000'
         RTX3080_WEBSITE = 'https://www.hardwareluxx.de/community/threads/rtx-3080-gpu-verf%C3%BCgbarkeitshinweise.1281755/page-1000'
@@ -39,24 +40,27 @@ class gpu(website):
         driverRX = self.getWebDriver(RX_WEBSITE)
         driverRX.implicitly_wait(10)
         sleep(3)
-        rxPageContent = driverRX.find_element_by_xpath(xpath).text
-        if rxPageContent != self.oldRxPageContent:
-          if self.oldRxPageContent:
-            self.changedWebsites.append(RX_WEBSITE)
-          self.oldRxPageContent = rxPageContent
+        rxPosts = driverRX.find_elements_by_class_name('bbWrapper')
+        rxPostCount = len(rxPosts)
+        if rxPostCount != self.oldRxPostCount:
+          if self.oldRxPostCount:
+            self.newGpuPosts["Radeon"] = rxPosts[-1].text
+          self.oldRxPostCount = rxPostCount
         else:
           logger.info("No new RX cards found")
+          self.newGpuPosts["Radeon"] = rxPosts[-1].text
         driverRX.quit()
 
         # check for new 3070 cards
         driver3070 = self.getWebDriver(RTX3070_WEBSITE)
         driver3070.implicitly_wait(10)
         sleep(3)
-        rtx3070PageContent = driver3070.find_element_by_xpath(xpath).text
-        if rtx3070PageContent != self.old3070PageContent:
-          if self.old3070PageContent:
-            self.changedWebsites.append(RTX3070_WEBSITE)
-          self.old3070PageContent = rtx3070PageContent
+        rtx3070Posts = driver3070.find_elements_by_class_name('bbWrapper')
+        rtx3070PostCount = len(rtx3070Posts)
+        if rtx3070PostCount != self.old3070PostCount:
+          if self.old3070PostCount:
+            self.newGpuPosts["RTX3070"] = rtx3070Posts[-1].text
+          self.old3070PostCount = rtx3070PostCount
         else:
           logger.info("No new 3070 cards found")
         driver3070.quit()
@@ -65,11 +69,12 @@ class gpu(website):
         driver3080 = self.getWebDriver(RTX3080_WEBSITE)
         driver3080.implicitly_wait(10)
         sleep(3)
-        rtx3080PageContent = driver3080.find_element_by_xpath(xpath).text
-        if rtx3080PageContent != self.old3080PageContent:
-          if self.old3080PageContent:
-            self.changedWebsites.append(RTX3080_WEBSITE)
-          self.old3080PageContent = rtx3080PageContent
+        rtx3080Posts = driver3080.find_elements_by_class_name('bbWrapper')
+        rtx3080PostCount = len(rtx3080Posts)
+        if rtx3080PostCount != self.old3080PostCount:
+          if self.old3080PostCount:
+            self.newGpuPosts["RTX3080"] = rtx3080Posts[-1].text
+          self.old3080PostCount = rtx3080PostCount
         else:
           logger.info("No new 3080 cards found")
         driver3080.quit()
@@ -78,11 +83,12 @@ class gpu(website):
         driver3090 = self.getWebDriver(RTX3090_WEBSITE)
         driver3090.implicitly_wait(10)
         sleep(3)
-        rtx3090PageContent = driver3090.find_element_by_xpath(xpath).text
-        if rtx3090PageContent != self.old3090PageContent:
-          if self.old3090PageContent:
-            self.changedWebsites.append(RTX3090_WEBSITE)
-          self.old3090PageContent = rtx3090PageContent
+        rtx3090Posts = driver3090.find_elements_by_class_name('bbWrapper')
+        rtx3090PostCount = len(rtx3090Posts)
+        if rtx3090PostCount != self.old3090PostCount:
+          if self.old3090PostCount:
+            self.newGpuPosts["RTX3090"] = rtx3090Posts[-1].text
+          self.old3090PostCount = rtx3090PostCount
         else:
           logger.info("No new 3090 cards found")
         driver3090.quit()

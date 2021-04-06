@@ -28,5 +28,5 @@ class email():
         Send given email
         """
         DATA = 'From:%s\nTo:%s\nSubject:%s\n\n%s' % (self.email, self.email, \
-                                                     subject, message)
+                                                     subject, message.encode('UTF-8'))
         self.server.sendmail(self.email, self.email, DATA)

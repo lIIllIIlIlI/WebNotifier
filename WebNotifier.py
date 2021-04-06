@@ -47,7 +47,7 @@ if __name__ == "__main__":
             email.sendEmail(logitech.URL, "Logitech keyboard is available")
             sleep(60*60*24)
         gpu.update()
-        if gpu.changedWebsites:
-            for website in gpu.changedWebsites:
-                email.sendEmail(website, "Gpu ist available")
-        sleep(110)
+        if gpu.newGpuPosts:
+            for gpu, post in gpu.newGpuPosts.items():
+                email.sendEmail(post, "New " + gpu + " gpu available")
+        sleep(120)
