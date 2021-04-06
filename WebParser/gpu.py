@@ -52,7 +52,7 @@ class gpu(website):
         driver3070 = self.getWebDriver(RTX3070_WEBSITE)
         driver3070.implicitly_wait(10)
         sleep(3)
-        rtx3070PageContent = driver3070.find_element_by_xpath(xpath)
+        rtx3070PageContent = driver3070.find_element_by_xpath(xpath).text
         if rtx3070PageContent != self.old3070PageContent:
           if self.old3070PageContent:
             self.changedWebsites.append(RTX3070_WEBSITE)

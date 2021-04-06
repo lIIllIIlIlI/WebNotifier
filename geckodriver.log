@@ -1470,3 +1470,154 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 2059 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:58346
+1617667627256	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileCui7Gn"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667628252	Marionette	INFO	Listening on port 58355
+1617667628274	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617667630271	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1617667644610	Marionette	INFO	Stopped listening on port 58355
+1617667645160	geckodriver	INFO	Listening on 127.0.0.1:58496
+1617667648163	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileZVEOz4"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667649191	Marionette	INFO	Listening on port 58506
+1617667649677	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 2767 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667654263	Marionette	INFO	Stopped listening on port 58506
+1617667654616	geckodriver	INFO	Listening on 127.0.0.1:58575
+1617667657617	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofiletLi3FM"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667658592	Marionette	INFO	Listening on port 58585
+1617667658636	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 4407 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667662455	Marionette	INFO	Stopped listening on port 58585
+1617667662832	geckodriver	INFO	Listening on 127.0.0.1:58655
+1617667665835	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofile2jCYCP"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667666886	Marionette	INFO	Listening on port 58664
+1617667667346	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 5376 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667672132	Marionette	INFO	Stopped listening on port 58664
+1617667672583	geckodriver	INFO	Listening on 127.0.0.1:58735
+1617667675587	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileGQWgPc"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667676637	Marionette	INFO	Listening on port 58744
+1617667677105	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 6443 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667681221	Marionette	INFO	Stopped listening on port 58744
+1617667791562	geckodriver	INFO	Listening on 127.0.0.1:58939
+1617667794574	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileOAJh4T"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667795602	Marionette	INFO	Listening on port 58950
+1617667796088	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617667798100	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1617667812386	Marionette	INFO	Stopped listening on port 58950
+1617667812865	geckodriver	INFO	Listening on 127.0.0.1:59093
+1617667815888	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileBzDEWi"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667816961	Marionette	INFO	Listening on port 59102
+1617667817401	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 2556 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667821774	Marionette	INFO	Stopped listening on port 59102
+1617667822137	geckodriver	INFO	Listening on 127.0.0.1:59174
+1617667825160	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileDrVNRa"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667826185	Marionette	INFO	Listening on port 59183
+1617667826672	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 1499 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667830548	Marionette	INFO	Stopped listening on port 59183
+1617667831009	geckodriver	INFO	Listening on 127.0.0.1:59252
+1617667834043	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileiCBsQl"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667835086	Marionette	INFO	Listening on port 59263
+1617667835555	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 5301 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667840365	Marionette	INFO	Stopped listening on port 59263
+1617667840818	geckodriver	INFO	Listening on 127.0.0.1:59360
+1617667843821	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofilehIjaGC"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667844881	Marionette	INFO	Listening on port 59372
+1617667845334	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 4679 > eval line 1 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667849540	Marionette	INFO	Stopped listening on port 59372
+1617667960586	geckodriver	INFO	Listening on 127.0.0.1:59532
+1617667963602	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofilea1TG7Y"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667964638	Marionette	INFO	Listening on port 59541
+1617667965114	Marionette	WARN	TLS certificate errors will be ignored for this session
+1617667967189	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1617667981462	Marionette	INFO	Stopped listening on port 59541
+1617667982004	geckodriver	INFO	Listening on 127.0.0.1:59681
+1617667985008	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofilemYfJlg"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667986035	Marionette	INFO	Listening on port 59694
+1617667986520	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 5929 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667990811	Marionette	INFO	Stopped listening on port 59694
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1617667991175	geckodriver	INFO	Listening on 127.0.0.1:59761
+1617667994188	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofile1zJymk"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617667995109	Marionette	INFO	Listening on port 59770
+1617667995205	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 160 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617667999007	Marionette	INFO	Stopped listening on port 59770
+1617667999351	geckodriver	INFO	Listening on 127.0.0.1:59840
+1617668002355	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofile90cxbk"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617668003381	Marionette	INFO	Listening on port 59850
+1617668003866	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 3026 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617668008628	Marionette	INFO	Stopped listening on port 59850
+1617668009073	geckodriver	INFO	Listening on 127.0.0.1:59922
+1617668012076	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileqPBA9t"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617668013022	Marionette	INFO	Listening on port 59931
+1617668013095	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://pagead2.googlesyndication.com/bg/DE6_jZsYe42TxIvZMyCjeDFY2mBt4gt7GQO59cBhhbM.js line 1 > eval line 3672 > eval, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1617668018301	Marionette	INFO	Stopped listening on port 59931
