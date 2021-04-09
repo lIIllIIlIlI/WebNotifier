@@ -4599,3 +4599,13 @@ JavaScript error: https://www.logitechg.com/etc.clientlibs/logitech-common/clien
 1617928422054	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
 console.log: WebExtensions: reset-default-search: No addons in our list are installed.
 JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+Exiting due to channel error.
+1617993380785	geckodriver	INFO	Listening on 127.0.0.1:60220
+1617993383793	mozrunner::runner	INFO	Running command: "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\lukas\\AppData\\Local\\Temp\\rust_mozprofileHaWf38"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1617993385245	Marionette	INFO	Listening on port 60229
+1617993385315	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.logitechg.com/etc.clientlibs/logitech-common/clientlibs/onetrust.min.32466e445f9e9ea6df4be5af56bc9981.js, line 6: TypeError: window.logitech.acceptedCookieGroups is undefined
+1617993386567	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.

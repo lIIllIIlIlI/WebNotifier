@@ -2,6 +2,8 @@
 import logging
 import sys
 import configparser
+from urllib.error import URLError
+from urllib.request import urlopen
 
 from pathlib import Path
 from time import sleep
@@ -31,9 +33,19 @@ def readConfigs():
     config.read(iniFile)
     return config
 
+def wait_for_internet_connection():
+    while True:
+        try:
+            response = urlopen('https://www.google.com/',timeout=60)
+            return
+        except URLError:
+            logger.warning("No internet access, waiting ...")
+            pass
+
 if __name__ == "__main__":
     checkEnvironment()
     config = readConfigs()
+
     emailAddress = config["GENERAL"]["EMAIL_ADDRESS"]
     emailPasswort = password.getEmailPassword(emailAddress)
     email = email.email(emailAddress, emailPasswort)
