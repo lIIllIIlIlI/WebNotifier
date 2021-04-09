@@ -13,7 +13,7 @@ import WebParser.gpu as gpuWebsite
 
 
 # Globals ---------------------
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, filename="WebNotifier.log")
 logger = logging.getLogger(__name__)
 
 
@@ -49,5 +49,5 @@ if __name__ == "__main__":
         gpu.update()
         if gpu.newGpuPosts:
             for gpu, post in gpu.newGpuPosts.items():
-                email.sendEmail(post, "New " + gpu + " gpu available")
+                email.sendEmail(str(post).encode('UTF-8'), "New " + type(gpu) + " gpu available")
         sleep(120)

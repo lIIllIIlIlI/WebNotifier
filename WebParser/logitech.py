@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from selenium.common.exceptions import NoSuchElementException
 
 
 # Globals ---------------------
@@ -61,15 +62,19 @@ class logitech(website):
         # Furthermore, selecting a layout/switch combination that is not available in the current color
         # changes the color automatically.
         sleep(5)
-        picture = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[17]/div[1]/div/ul/div/div/li[1]/div')
-        colorsWhite = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[2]/button').is_enabled()
-        colorBlack = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[1]/button').is_enabled()
-        outerHtml = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[12]/div[1]/div/ul/div/div/li[1]/div/img').get_attribute('outerHTML')
-        if re.search(r'tkl-carbon-gallery' ,outerHtml):
-            self.isChanged = False
-            logger.info("Logitech keyboard not available")
-        else:
-            self.isChanged = True
+        try:
+          picture = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[17]/div[1]/div/ul/div/div/li[1]/div')
+          colorsWhite = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[2]/button').is_enabled()
+          colorBlack = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[2]/div/div[4]/div[1]/ul/li[1]/button').is_enabled()
+          outerHtml = driver.find_element_by_xpath('/html/body/div[1]/div/main/div[1]/div/div[12]/section/div/div/div[1]/div[12]/div[1]/div/ul/div/div/li[1]/div/img').get_attribute('outerHTML')
+          if re.search(r'tkl-carbon-gallery', outerHtml):
+              self.isChanged = False
+              logger.info("Logitech keyboard not available")
+          else:
+              self.isChanged = True
+        except NoSuchElementException:
+          logger.info("Page did not load properly, continue ...")
+          self.isChanged = False
         # There are other options like .dispense() or .close(). Yet quit() is the only one that
         # closes all tabs and frees memory.
         driver.quit()
