@@ -33,19 +33,18 @@ def readConfigs():
     config.read(iniFile)
     return config
 
-def wait_for_internet_connection():
+def waitForInternet():
     while True:
         try:
-            response = urlopen('https://www.google.com/',timeout=60)
+            urlopen('http://google.com')
             return
         except URLError:
-            logger.warning("No internet access, waiting ...")
             pass
 
 if __name__ == "__main__":
     checkEnvironment()
     config = readConfigs()
-
+    waitForInternet()
     emailAddress = config["GENERAL"]["EMAIL_ADDRESS"]
     emailPasswort = password.getEmailPassword(emailAddress)
     email = email.email(emailAddress, emailPasswort)
@@ -60,6 +59,6 @@ if __name__ == "__main__":
             sleep(60*60*24)
         gpu.update()
         if gpu.newGpuPosts:
-            for gpu, post in gpu.newGpuPosts.items():
-                email.sendEmail(str(post).encode('UTF-8'), "New " + type(gpu) + " gpu available")
+            for gpuName, post in gpu.newGpuPosts.items():
+                email.sendEmail(str(post).encode('UTF-8'), "New " + gpuName + " gpu available")
         sleep(120)

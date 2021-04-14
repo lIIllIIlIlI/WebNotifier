@@ -12,7 +12,9 @@ class email():
         self.email = email
         self.password = password
         self.port = 587
-        self.setupEmailServer()
+        # user is logged out after some time, therefore establish
+        # connection right before sending the email
+        # self.setupEmailServer()
 
     def setupEmailServer(self):
         """
@@ -27,6 +29,8 @@ class email():
         """
         Send given email
         """
+        self.setupEmailServer()
         DATA = 'From:%s\nTo:%s\nSubject:%s\n\n%s' % (self.email, self.email, \
                                                      subject, message)
         self.server.sendmail(self.email, self.email, DATA)
+        self.server.quit()

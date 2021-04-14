@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import ElementClickInterceptedException
 
 
 # Globals ---------------------
@@ -44,7 +45,12 @@ class logitech(website):
         # -------- Accept all cookies
         # cookies might bob up after the page is fully loaded already
         sleep(5)
-        driver.find_element_by_xpath('//*[@id="onetrust-accept-btn-handler"]').click()
+        try:
+          driver.find_element_by_xpath('//*[@id="onetrust-accept-btn-handler"]').click()
+        except NoSuchElementException:
+          logger.warning("Logitech website showed no cookie banner")
+        except ElementClickInterceptedException:
+          logger.warning("Could not accept cookies because another window blocks the banner")
         # -------- select switches and keyboard layout
         # find_element_by_class_name returns only the first element of find_elements_by_class_name
         # unfortunately, all dropdown menus share the same class name.
